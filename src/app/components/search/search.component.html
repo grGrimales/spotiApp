@@ -1,0 +1,9 @@
+<form class="d-flex">
+    <input #termino class="form-control m-2" (keyup)="buscar(termino.value)" type="search" placeholder="Search" aria-label="Search">
+  </form>
+
+  <app-loading *ngIf="loading" class="m-5"></app-loading>
+
+  <app-tarjetas *ngIf="!loading" [items]= "artistas"></app-tarjetas>
+
+  
